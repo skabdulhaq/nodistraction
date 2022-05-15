@@ -1,0 +1,22 @@
+{
+  "name": "No Distractions",
+  "version": "0.1",
+  "manifest_version": 3,
+  "description": "Removes Recommendation from youtube.",
+  "icons": {
+    "128": "close.png"
+  },
+  "default_locale": "en",
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
