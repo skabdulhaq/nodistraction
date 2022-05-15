@@ -18,8 +18,13 @@ setInterval(function () {
 	}
 	else if (document.querySelector("#primary > ytd-rich-grid-renderer") && window.location.href === ("https://www.youtube.com/")) {
 		document.querySelector("#primary > ytd-rich-grid-renderer").remove();
-		document.querySelector("#primary").innerHTML = "<h1 style='color: white; text-align: center;font-size:10rem;align-self: center;;'>Let's Do Something Productive!!</h1>";
+		document.querySelector("#guide-inner-content").remove();
+		document.querySelector("#guide-button").click()
+		document.querySelector("#guide-content").remove();
+		document.querySelector("#guide-button").remove();
+		document.querySelector("#primary").innerHTML = "<h1 style='color: white; text-align: center;font-size:8rem;align-self: center;;'>Let's Do Something Productive!!</h1>";
 		document.querySelector("#content > ytd-mini-guide-renderer").remove();
+		// document.querySelector("#guide").getAttribute();
 		document.querySelector("#sections").remove();
 	}
 	else if (window.location.href.includes("www.youtube.com/watch")) {
