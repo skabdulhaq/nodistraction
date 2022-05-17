@@ -41,5 +41,10 @@ setInterval(function () {
 			}
 			document.querySelector("#primary").innerHTML = "<h1 style='color: white; text-align: center;font-size:8rem;align-self: center;;'>Let's Do Something Productive!!</h1>";
 		}
-
+	else{
+		if (document.querySelector("#guide-button")) {
+			document.querySelector("#guide-button").click()
+			document.querySelector("#guide-button").remove();
+		}
+	}
 }, 1000);
