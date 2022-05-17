@@ -31,11 +31,11 @@ setInterval(function () {
 		remove_rec();
 	}
 	else if (window.location.href === "https://www.youtube.com/") {
-		document.querySelector("#primary").innerHTML = "<h1 style='color: white; text-align: center;font-size:8rem;align-self: center;;'>Let's Do Something Productive!!</h1>";
-		removeSideNav();
 		if (document.querySelector("#primary > ytd-rich-grid-renderer")) {
 			document.querySelector("#primary > ytd-rich-grid-renderer").remove();
 		}
+		removeSideNav();
+		document.querySelector("#primary").innerHTML = "<h1 style='color: white; text-align: center;font-size:8rem;align-self: center;;'>Let's Do Something Productive!!</h1>";
 	}
 	else {
 		removeSideNav();
