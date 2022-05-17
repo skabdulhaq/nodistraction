@@ -12,6 +12,23 @@ function remove_rec() {
 		});
 	}
 }
+
+function removeSideNav(){
+	if (document.querySelector("#guide-button")) {
+		document.querySelector("#guide-button").click()
+		document.querySelector("#guide-button").remove();
+	}
+	if (document.querySelector("#guide-content")) {
+		document.querySelector("#guide-content").remove();
+	}
+	if (document.querySelector("#sections")) {
+		document.querySelector("#sections").remove();
+	}
+	if (document.querySelector("#content > ytd-mini-guide-renderer")) {
+		document.querySelector("#content > ytd-mini-guide-renderer").remove();
+	}
+}
+
 setInterval(function () {
 	if (window.location.href.includes("www.youtube.com/watch") && document.querySelector("#secondary")) {
 		remove_rec();
@@ -42,15 +59,6 @@ setInterval(function () {
 			document.querySelector("#primary").innerHTML = "<h1 style='color: white; text-align: center;font-size:8rem;align-self: center;;'>Let's Do Something Productive!!</h1>";
 		}
 	else{
-		if (document.querySelector("#guide-button")) {
-			document.querySelector("#guide-button").click()
-			document.querySelector("#guide-button").remove();
-		}
-		if (document.querySelector("#guide-content")) {
-			document.querySelector("#guide-content").remove();
-		}
-		if (document.querySelector("#sections")) {
-			document.querySelector("#sections").remove();
-		}
+		removeSideNav();
 	}
 }, 1000);
