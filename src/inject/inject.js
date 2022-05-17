@@ -1,15 +1,11 @@
 function remove_rec() {
 	if (window.location.href.includes("www.youtube.com/watch?v=")) {
-		// chrome.runtime.sendMessage({}, function () {
-			// var readyStateCheckInterval = setInterval(function () {
-				// clearInterval(readyStateCheckInterval);
-				// setInterval(function () {
-					if (document.querySelector("#secondary")) {
-						document.querySelector("#secondary").remove();
-					}
-				// }, 10);
-			// }, 10);
-		// });
+		if (document.querySelector("#secondary")) {
+			document.querySelector("#secondary").remove();
+		}
+		if (document.querySelector("#movie_player > div.html5-endscreen.ytp-player-content.videowall-endscreen.ytp-show-tiles")) {
+			document.querySelector("#movie_player > div.html5-endscreen.ytp-player-content.videowall-endscreen.ytp-show-tiles").remove();
+		}
 	}
 }
 
@@ -41,9 +37,6 @@ setInterval(function () {
 		removeSideNav();
 		if (document.querySelector("#primary > ytd-rich-grid-renderer")) {
 			document.querySelector("#primary > ytd-rich-grid-renderer").remove();
-		}
-		if (window.location.href.includes("www.youtube.com/watch")) {
-			document.querySelector("#movie_player > div.html5-endscreen.ytp-player-content.videowall-endscreen.ytp-show-tiles").remove();
 		}
 	}
 	else {
