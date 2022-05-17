@@ -46,5 +46,8 @@ setInterval(function () {
 			document.querySelector("#guide-button").click()
 			document.querySelector("#guide-button").remove();
 		}
+		if (document.querySelector("#sections")) {
+			document.querySelector("#sections").remove();
+		}
 	}
 }, 1000);
