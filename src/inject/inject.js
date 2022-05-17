@@ -16,18 +16,27 @@ setInterval(function () {
 	if (window.location.href.includes("www.youtube.com/watch") && document.querySelector("#secondary")) {
 		remove_rec();
 	}
-	else if (document.querySelector("#primary > ytd-rich-grid-renderer") && window.location.href === ("https://www.youtube.com/")) {
+	if (document.querySelector("#primary > ytd-rich-grid-renderer") && window.location.href === ("https://www.youtube.com/")) {
 		document.querySelector("#primary > ytd-rich-grid-renderer").remove();
+	}
+	if (document.querySelector("#guide-inner-content") && window.location.href === ("https://www.youtube.com/")) {
 		document.querySelector("#guide-inner-content").remove();
+	}
+	if (document.querySelector("#guide-button")) {
 		document.querySelector("#guide-button").click()
-		document.querySelector("#guide-content").remove();
 		document.querySelector("#guide-button").remove();
-		document.querySelector("#primary").innerHTML = "<h1 style='color: white; text-align: center;font-size:8rem;align-self: center;;'>Let's Do Something Productive!!</h1>";
+	}
+	if (document.querySelector("#guide-content")) {
+		document.querySelector("#guide-content").remove();
+	}
+	if (document.querySelector("#content > ytd-mini-guide-renderer")) {
 		document.querySelector("#content > ytd-mini-guide-renderer").remove();
-		// document.querySelector("#guide").getAttribute();
+	}
+	if (document.querySelector("#sections")) {
 		document.querySelector("#sections").remove();
 	}
-	else if (window.location.href.includes("www.youtube.com/watch")) {
+	if (window.location.href.includes("www.youtube.com/watch")) {
 		document.querySelector("#movie_player > div.html5-endscreen.ytp-player-content.videowall-endscreen.ytp-show-tiles").remove();
 	}
+	document.querySelector("#primary").innerHTML = "<h1 style='color: white; text-align: center;font-size:8rem;align-self: center;;'>Let's Do Something Productive!!</h1>";
 }, 1000);
