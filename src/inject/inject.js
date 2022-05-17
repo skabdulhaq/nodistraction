@@ -27,7 +27,7 @@ function removeSideNav() {
 }
 
 setInterval(function () {
-	if (window.location.href.includes("www.youtube.com/watch?v=") && document.querySelector("#secondary")) {
+	if (window.location.href.includes("www.youtube.com/watch?v=")) {
 		remove_rec();
 	}
 	else if (window.location.href === "https://www.youtube.com/") {
