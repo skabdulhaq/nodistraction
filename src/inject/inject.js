@@ -1,11 +1,9 @@
 function remove_rec() {
-	if (window.location.href.includes("www.youtube.com/watch?v=")) {
-		if (document.querySelector("#secondary")) {
-			document.querySelector("#secondary").remove();
-		}
-		if (document.querySelector("#movie_player > div.html5-endscreen.ytp-player-content.videowall-endscreen.ytp-show-tiles")) {
-			document.querySelector("#movie_player > div.html5-endscreen.ytp-player-content.videowall-endscreen.ytp-show-tiles").remove();
-		}
+	if (document.querySelector("#secondary")) {
+		document.querySelector("#secondary").remove();
+	}
+	if (document.querySelector("#movie_player > div.html5-endscreen.ytp-player-content.videowall-endscreen.ytp-show-tiles")) {
+		document.querySelector("#movie_player > div.html5-endscreen.ytp-player-content.videowall-endscreen.ytp-show-tiles").remove();
 	}
 }
 
@@ -29,7 +27,7 @@ function removeSideNav() {
 }
 
 setInterval(function () {
-	if (window.location.href.includes("www.youtube.com/watch") && document.querySelector("#secondary")) {
+	if (window.location.href.includes("www.youtube.com/watch?v=") && document.querySelector("#secondary")) {
 		remove_rec();
 	}
 	else if (window.location.href === "https://www.youtube.com/") {
