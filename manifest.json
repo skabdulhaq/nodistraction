@@ -2,7 +2,7 @@
   "name": "No Distractions",
   "version": "1.2",
   "manifest_version": 3,
-  "description": "Do you often find yourself getting sidetracked by recommended videos while trying to study or focus on work? No Distractions is the solution you've been looking for. This lightweight Chrome and Edge extension blocks YouTube's recommended videos, so you can stay focused on your task without getting tempted to watch more videos.Once installed, No Distractions works seamlessly in the background, automatically hiding the recommended video sidebar on YouTube's homepage, search results, and video pages. You can still search for and watch videos as usual, but without the distractions of unrelated content.Whether you're a student, a professional, or anyone who wants to stay productive while using YouTube, this extension can help you achieve your goals. Install No Distractions today and take back control of your online experience!",
+  "description": "Take back control of your YouTube feed with NoDistractions. Streamline your viewing experience and stay focused on the videos that matter most to you.",
   "icons": {
     "128": "close.png"
   },
