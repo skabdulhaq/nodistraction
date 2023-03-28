@@ -25,8 +25,15 @@ function removeSideNav() {
 		document.querySelector("#guide-inner-content").remove();
 	}
 }
-
+function removeShots(){
+	if (window.location.href.includes("shorts")){
+		setTimeout(()=>document.querySelector('#shorts-container').remove(),60000);
+	}
+}
 setInterval(function () {
+	if (document.querySelector('#shorts-container')){
+		removeShots();
+	}
 	if (window.location.href.includes("www.youtube.com/watch?v=")) {
 		remove_rec();
 	}
