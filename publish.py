@@ -124,7 +124,8 @@ def get_submission_details(token, operation_id):
     if response.status_code == 200:
         return response.json()
     else:
-        logging.error(f"Get submission details failed: {response.status_code} - {response.text}")
+        time.sleep(10)
+        print(f"Get submission details failed: {response.status_code} - {response.text}")
     return None 
 
 zip_folder("./dist", src_folder)
