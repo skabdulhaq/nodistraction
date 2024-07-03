@@ -126,7 +126,7 @@ def get_submission_details(token, operation_id):
     else:
         time.sleep(10)
         print(f"Get submission details failed: {response.status_code} - {response.text}")
-    return None 
+        return None 
 
 zip_folder("./dist", src_folder)
 login_token = login()
