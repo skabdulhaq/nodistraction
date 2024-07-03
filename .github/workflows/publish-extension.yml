@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - 'dist/**'
-      - 'dist/**'
     branches:
       - master
   workflow_dispatch:
