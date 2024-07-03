@@ -5,7 +5,7 @@ on:
     paths:
       - 'dist/**'
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 jobs:
