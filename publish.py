@@ -135,15 +135,15 @@ if operation_id is None:
     exit(-1)
 
 file_upload_status = get_review_status(login_token, operation_id)
-while file_upload_status["message"] is None:
-    file_upload_status = get_review_status(login_token, operation_id)
-    logging.info(f"Uploading {file_upload_status['status']}...")
+if file_upload_status is not None:
+    while file_upload_status["message"] is None:
+        file_upload_status = get_review_status(login_token, operation_id)
+        logging.info(f"Uploading {file_upload_status['status']}...")
+    if file_upload_status['errors'] or file_upload_status['errorCode']:
+        logging.error(f"{file_upload_status['status']}::{file_upload_status['errors']}{file_upload_status['errorCode']}\n{file_upload_status['message']}")
+        exit(-1)
+    logging.info(f"{file_upload_status['id']}::{file_upload_status['status']}\n{file_upload_status['message']}")
 
-if file_upload_status['errors'] or file_upload_status['errorCode']:
-    logging.error(f"{file_upload_status['status']}::{file_upload_status['errors']}{file_upload_status['errorCode']}\n{file_upload_status['message']}")
-    exit(-1)
-
-logging.info(f"{file_upload_status['id']}::{file_upload_status['status']}\n{file_upload_status['message']}")
 admin_review_operation_id = send_submission(login_token)
 if admin_review_operation_id is None:
     logging.error("Submission failed")
