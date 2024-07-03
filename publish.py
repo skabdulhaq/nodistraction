@@ -74,6 +74,8 @@ def get_review_status(token, operation_id):
         return response.json()
     elif response.status_code == 200:
         return response.json()
+    elif response.status_code == 429:
+        return response.json()
     else:
         print(f"Get review status failed: {response.status_code} - {response.text}")
         logging.error(f"Get review status failed: {response.status_code} - {response.text}")
@@ -139,8 +141,8 @@ file_upload_status = get_review_status(login_token, operation_id)
 
 while file_upload_status["message"] is None:
     file_upload_status = get_review_status(login_token, operation_id)
-    time.sleep(5)
-    print("Trying..")
+    if  "Rate limit is exceeded." in file_upload_status["message"]:
+        time.sleep(10)
     logging.info(f"Uploading {file_upload_status['status']}...")
 if file_upload_status:
     if file_upload_status['errors'] or file_upload_status['errorCode']:
