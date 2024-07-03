@@ -141,7 +141,8 @@ file_upload_status = get_review_status(login_token, operation_id)
 
 while file_upload_status["message"] is None:
     file_upload_status = get_review_status(login_token, operation_id)
-    if  "Rate limit is exceeded." in file_upload_status["message"]:
+    print(file_upload_status["message"])
+    if  "Rate limit is" in file_upload_status["message"]:
         print(file_upload_status["message"])
         time.sleep(10)
 if "errors" in list(file_upload_status.keys()) or "errorCode" in list(file_upload_status.keys()):
