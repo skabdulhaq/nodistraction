@@ -144,12 +144,13 @@ while file_upload_status["message"] is None:
     if  "Rate limit is exceeded." in file_upload_status["message"]:
         time.sleep(10)
     logging.info(f"Uploading {file_upload_status['status']}...")
-if file_upload_status:
+
+if "errors" in list(file_upload_status.keys()) or "errorCode" in list(file_upload_status.keys()):
     if file_upload_status['errors'] or file_upload_status['errorCode']:
         logging.error(f"{file_upload_status['status']}::{file_upload_status['errors']}{file_upload_status['errorCode']}\n{file_upload_status['message']}")
         exit(-1)
 
-logging.info(f"{file_upload_status['id']}::{file_upload_status['status']}\n{file_upload_status['message']}")
+    logging.info(f"{file_upload_status['id']}::{file_upload_status['status']}\n{file_upload_status['message']}")
 admin_review_operation_id = send_submission(login_token)
 if admin_review_operation_id is None:
     logging.error("Submission failed")
