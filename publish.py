@@ -11,6 +11,9 @@ formatted_now = now.strftime("%A-%B-%d-%Y-%I-%M-%S-%p")
 if not os.path.exists('logs'):
     os.makedirs('logs')
 
+if not os.path.exists('releases'):
+    os.makedirs('releases')
+
 logging.basicConfig(
     filename=f'logs/{formatted_now}.log',
     level=logging.INFO,
