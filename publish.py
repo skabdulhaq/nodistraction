@@ -181,6 +181,6 @@ if admin_review_operation_id is None:
 
 print("Admin review operation id: ", admin_review_operation_id)
 current_submission_details = get_submission_details(login_token, admin_review_operation_id)
-
+print(current_submission_details)
 if current_submission_details["errorCode"] or current_submission_details["errors"]:
     print(f"{current_submission_details['status']}::{current_submission_details['errors']}::{current_submission_details['errorCode']}\n{current_submission_details['message']}")
