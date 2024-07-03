@@ -144,8 +144,6 @@ while file_upload_status["message"] is None:
     if  "Rate limit is exceeded." in file_upload_status["message"]:
         print(file_upload_status["message"])
         time.sleep(10)
-    # else:
-        # logging.info(f"Uploading {file_upload_status['status']}...")
 if "errors" in list(file_upload_status.keys()) or "errorCode" in list(file_upload_status.keys()):
     if file_upload_status['errors'] or file_upload_status['errorCode']:
         logging.error(f"{file_upload_status['status']}::{file_upload_status['errors']}{file_upload_status['errorCode']}\n{file_upload_status['message']}")
