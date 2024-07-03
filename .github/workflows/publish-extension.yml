@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'dist/**'
+      - 'publish.py'
     branches:
       - main
   workflow_dispatch:
