@@ -1,0 +1,47 @@
+{
+  "name": "No Distractions",
+  "version": "1.5",
+  "manifest_version": 3,
+  "description": "Say goodbye to endless YouTube recommendations and shorts with our extension Get back to watching what you want without distractions",
+  "icons": {
+    "128": "close.png"
+  },
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "scripting",
+    "activeTab"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "thubnail_blocking",
+        "enabled": true,
+        "path": "rules/thubnail_blocking.json"
+      }
+    ]
+  },
+  "background": {
+    "service_worker": "src/js/background.js",
+    "type": "module"
+  },
+  "default_locale": "en",
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "No Distractions"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

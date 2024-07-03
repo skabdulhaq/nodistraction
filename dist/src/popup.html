@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Distractions</title>
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+
+<body>
+    <div class="p-10 min-w-[600px] max-w-[800px]">
+        <div class="p-0 navbar bg-base-100 flex justify-between">
+            <p class="text-xl">No Distractions</p>
+            <!-- <p class="text-xl">No Distractions</p> -->
+            <!-- Add My Github And Linkedin links -->
+        </div>
+        <div id="options" class="flex flex-col gap-5 ">
+            <div id="productive-mode">
+                <div class="flex flex-col gap-2 form-control">
+                    <label class="flex gap-5 p-0 cursor-pointer label tooltip"
+                        data-tip="This mode will remove thumbnails from youtube">
+                        <span class="label-text text-base mr-5 ">Ultra Productive mode</span>
+                        <input id="productiveToggle" type="checkbox" class="toggle toggle-primary" checked />
+                    </label>
+                    <a class="link link-accent text-base link-hover" href="https://www.youtube.com/account_playback"
+                        target="_blank">Turn off Video previews option for your max productivity</a>
+                </div>
+            </div>
+        </div>
+        <div id="timer-container" style="display: none;">
+            <p id="timer" class="flex text-xl justify-center">Loading...</p>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
