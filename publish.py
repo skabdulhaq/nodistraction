@@ -22,7 +22,6 @@ load_dotenv()
 client_id = os.getenv("MICROSOFT_EDGE_STORE_CLIENT_ID")
 client_secret = os.getenv("MICROSOFT_EDGE_STORE_SECRET")
 product_id = os.getenv("MICROSOFT_EDGE_STORE_PRODUCT_ID")
-operation_id = os.getenv("MICROSOFT_EDGE_STORE_OPERATION_ID")
 
 api_url = "https://api.addons.microsoftedge.microsoft.com"
 
