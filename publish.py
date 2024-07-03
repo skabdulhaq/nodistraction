@@ -134,6 +134,7 @@ if operation_id is None:
     exit(-1)
 
 file_upload_status = get_review_status(login_token, operation_id)
+print(file_upload_status)
 while file_upload_status["message"] is None:
     file_upload_status = get_review_status(login_token, operation_id)
     logging.info(f"Uploading {file_upload_status['status']}...")
