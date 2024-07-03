@@ -24,6 +24,7 @@ client_secret = os.getenv("MICROSOFT_EDGE_STORE_SECRET")
 product_id = os.getenv("MICROSOFT_EDGE_STORE_PRODUCT_ID")
 
 api_url = "https://api.addons.microsoftedge.microsoft.com"
+src_folder = f"./releases/nodistractions-{formatted_now}.zip"
 
 def login():
     url = "https://login.microsoftonline.com/5c9eedce-81bc-42f3-8823-48ba6258b391/oauth2/v2.0/token"
@@ -117,14 +118,14 @@ def get_submission_details(token, operation_id):
         logging.error(f"Get submission details failed: {response.status_code} - {response.text}")
     return None 
 
-zip_folder("./dist", f"./releases/nodistractions-{formatted_now}.zip")
+zip_folder("./dist", src_folder)
 login_token = login()
 if login_token:
     logging.info("Login successful")
 else:
     logging.error("Login failed")
     exit(-1)
-operation_id = upload_file(login_token, "./releases/nodistractions-v-1.5.zip")
+operation_id = upload_file(login_token, src_folder)
 if operation_id is None:
     logging.error("File upload failed")
     exit(-1)
