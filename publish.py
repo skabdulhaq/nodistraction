@@ -123,6 +123,8 @@ def get_submission_details(token, operation_id):
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         return response.json()
+    elif response.status_code == 202:
+        response.json()
     else:
         time.sleep(10)
         print(f"Get submission details failed: {response.status_code} - {response.text}")
