@@ -164,7 +164,7 @@ file_upload_status = get_review_status(login_token, operation_id)
 
 while file_upload_status["message"] is None:
     file_upload_status = get_review_status(login_token, operation_id)
-    print(f"Uploading {file_upload_status['status']}...")
+    print(f"Uploading {file_upload_status}...")
 
 if file_upload_status['errors'] or file_upload_status['errorCode']:
     print(f"{file_upload_status['status']}::{file_upload_status['errors']}{file_upload_status['errorCode']}\n{file_upload_status['message']}")
