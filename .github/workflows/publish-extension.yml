@@ -39,7 +39,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add .
           git commit -m "Update logs"
-          git push -u origin logs
+          git push origin HEAD:refs/heads/logs
 
       # - name: Push changes
       #   uses: ad-m/github-push-action@master
