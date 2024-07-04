@@ -1,6 +1,9 @@
 import os
 import requests
 import time
+from dotenv import load_dotenv
+
+load_dotenv()
 client_id = os.getenv("MICROSOFT_EDGE_STORE_CLIENT_ID")
 client_secret = os.getenv("MICROSOFT_EDGE_STORE_SECRET")
 product_id = os.getenv("MICROSOFT_EDGE_STORE_PRODUCT_ID")
