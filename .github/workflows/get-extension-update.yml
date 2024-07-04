@@ -3,6 +3,7 @@ name: Check Update
 on:
   schedule:
     - cron: '*/20 * * * *'
+  workflow_dispatch:
 
 jobs:
   update-file:
