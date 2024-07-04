@@ -132,9 +132,7 @@ def get_submission_details(token, operation_id):
 
 zip_folder("./dist", src_folder)
 login_token = login()
-if login_token:
-    logging.info("Login successful")
-else:
+if login_token is None:
     logging.error("Login failed")
     exit(-1)
 operation_id = upload_file(login_token, src_folder)
@@ -142,28 +140,6 @@ if operation_id is None:
     logging.error("File upload failed")
     exit(-1)
 
-# file_upload_status = get_review_status(login_token, operation_id)
-
-# while file_upload_status["message"] is None:
-#     file_upload_status = get_review_status(login_token, operation_id)
-#     print(file_upload_status)
-#     # if file_upload_status["message"]:
-#     #     print(file_upload_status["message"])
-
-# if "errors" in list(file_upload_status.keys()) or "errorCode" in list(file_upload_status.keys()):
-#     if file_upload_status['errors'] or file_upload_status['errorCode']:
-#         logging.error(f"{file_upload_status['status']}::{file_upload_status['errors']}{file_upload_status['errorCode']}\n{file_upload_status['message']}")
-#         exit(-1)
-#     logging.info(f"{file_upload_status['id']}::{file_upload_status['status']}\n{file_upload_status['message']}")
-# admin_review_operation_id = send_submission(login_token)
-# if admin_review_operation_id is None:
-#     logging.error("Submission failed")
-#     exit(-1)
-
-# logging.info("Admin review operation id: ", admin_review_operation_id)
-# current_submission_details = get_submission_details(login_token, admin_review_operation_id)
-# if current_submission_details["errorCode"] or current_submission_details["errors"]:
-#     logging.error(f"{current_submission_details['status']}::{current_submission_details['errors']}::{current_submission_details['errorCode']}\n{current_submission_details['message']}")
 file_upload_status = get_review_status(login_token, operation_id)
 
 while file_upload_status["message"] is None:
