@@ -1,4 +1,4 @@
-name: Publish Extension
+name: Check Update
 
 on:
   schedule:
