@@ -47,7 +47,7 @@ def get_submission_details(token, operation_id):
 
 
 
-with open("./data/admin_operation", "w") as file:
+with open("./data/admin_operation", "r") as file:
     admin_review_operation_id = file.read()
 
 login_token = login()
