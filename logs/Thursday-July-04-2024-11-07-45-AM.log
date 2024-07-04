@@ -1,0 +1,12 @@
+2024-07-04 11:07:46,076 - INFO - Login successful
+2024-07-04 11:07:46,692 - INFO - File upload initiated
+2024-07-04 11:07:47,221 - INFO - Uploading {'id': '47bf7fdf-6baa-420c-bb35-a5ce8b9daee9', 'createdTime': '2024-07-04T11:07:46.6207707Z', 'lastUpdatedTime': '2024-07-04T11:07:46.7497797Z', 'status': 'InProgress', 'message': None, 'errorCode': None, 'errors': None}
+2024-07-04 11:07:49,492 - INFO - Uploading {'id': '47bf7fdf-6baa-420c-bb35-a5ce8b9daee9', 'createdTime': '2024-07-04T11:07:46.6207707Z', 'lastUpdatedTime': '2024-07-04T11:07:47.6644421Z', 'status': 'InProgress', 'message': None, 'errorCode': None, 'errors': None}
+2024-07-04 11:07:51,747 - INFO - Uploading {'id': '47bf7fdf-6baa-420c-bb35-a5ce8b9daee9', 'createdTime': '2024-07-04T11:07:46.6207707Z', 'lastUpdatedTime': '2024-07-04T11:07:47.6644421Z', 'status': 'InProgress', 'message': None, 'errorCode': None, 'errors': None}
+2024-07-04 11:07:53,999 - INFO - Uploading {'id': '47bf7fdf-6baa-420c-bb35-a5ce8b9daee9', 'createdTime': '2024-07-04T11:07:46.6207707Z', 'lastUpdatedTime': '2024-07-04T11:07:53.356211Z', 'status': 'InProgress', 'message': None, 'errorCode': None, 'errors': None}
+2024-07-04 11:07:56,262 - INFO - Uploading {'id': '47bf7fdf-6baa-420c-bb35-a5ce8b9daee9', 'createdTime': '2024-07-04T11:07:46.6207707Z', 'lastUpdatedTime': '2024-07-04T11:07:54.4399934Z', 'status': 'Succeeded', 'message': 'Successfully updated package to 47bf7fdf-6baa-420c-bb35-a5ce8b9daee9.zip', 'errorCode': '', 'errors': None}
+2024-07-04 11:07:58,262 - INFO - {'id': '47bf7fdf-6baa-420c-bb35-a5ce8b9daee9', 'createdTime': '2024-07-04T11:07:46.6207707Z', 'lastUpdatedTime': '2024-07-04T11:07:54.4399934Z', 'status': 'Succeeded', 'message': 'Successfully updated package to 47bf7fdf-6baa-420c-bb35-a5ce8b9daee9.zip', 'errorCode': '', 'errors': None}
+2024-07-04 11:07:58,262 - INFO - Successfully updated package to 47bf7fdf-6baa-420c-bb35-a5ce8b9daee9.zip
+2024-07-04 11:07:58,556 - INFO - Submission sent
+2024-07-04 11:07:58,556 - INFO - Admin review operation id: 5b1b9cca-1296-49cd-afbc-022bc6960a74
+2024-07-04 11:07:58,846 - INFO - {'id': '5b1b9cca-1296-49cd-afbc-022bc6960a74', 'createdTime': '2024-07-04T11:07:58.5063299Z', 'lastUpdatedTime': '2024-07-04T11:07:58.7767765Z', 'status': 'Failed', 'message': "Can't publish extension as your extension submission is in progress. Please try again later.", 'errorCode': 'InProgressSubmission', 'errors': None}
