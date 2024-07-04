@@ -1,0 +1,37 @@
+name: Publish Extension
+
+on:
+  schedule:
+    - cron: '* * * * *'
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: change files
+        run: |
+          git fetch 
+          git checkout origin/logs
+          git merge main
+      
+      - name: Run update script
+        env:
+          MICROSOFT_EDGE_STORE_CLIENT_ID: ${{ secrets.MICROSOFT_EDGE_STORE_CLIENT_ID }}
+          MICROSOFT_EDGE_STORE_SECRET: ${{ secrets.MICROSOFT_EDGE_STORE_SECRET }}
+          MICROSOFT_EDGE_STORE_PRODUCT_ID: ${{ secrets.MICROSOFT_EDGE_STORE_PRODUCT_ID }}
+
+        run: python check_update.py
+
+
