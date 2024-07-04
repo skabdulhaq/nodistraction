@@ -32,22 +32,14 @@ jobs:
           MICROSOFT_EDGE_STORE_PRODUCT_ID: ${{ secrets.MICROSOFT_EDGE_STORE_PRODUCT_ID }}
 
         run: python publish.py
-      # - name: Commit and push changes
-      #   run: |
-      #     git config --global user.name 'github-actions[bot]'
-      #     git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-      #     git add .
-      #     git commit -m 'Update logs'
-      #     git push
-      #   env:
-      #     github_token: ${{ secrets.GIT_PAT_TOKEN  }}
+
       - name: Commit files
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add .
           git commit -m "Update logs"
-          git push
+          git push -u origin logs
 
       # - name: Push changes
       #   uses: ad-m/github-push-action@master
