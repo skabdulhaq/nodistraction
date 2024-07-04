@@ -182,6 +182,6 @@ if admin_review_operation_id is None:
     logging.error("send_submission returned None")
     exit(-1)
 
-logging.info("Admin review operation id: ", admin_review_operation_id)
+logging.info(f"Admin review operation id: {admin_review_operation_id}")
 current_submission_details = get_submission_details(login_token, admin_review_operation_id)
-logging.info(current_submission_details)
+logging.info(f"{current_submission_details}")
