@@ -1,8 +1,8 @@
 name: Check Update
 
 on:
-  schedule:
-    - cron: '*/20 * * * *'
+  # schedule:
+    # - cron: '* 1 * * *'
   workflow_dispatch:
 
 jobs:
