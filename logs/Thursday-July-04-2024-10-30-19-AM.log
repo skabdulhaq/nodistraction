@@ -1,0 +1,12 @@
+2024-07-04 10:30:20,013 - INFO - Login successful
+2024-07-04 10:30:20,520 - INFO - File upload initiated
+2024-07-04 10:30:20,920 - INFO - Uploading {'id': 'ba3ef1d9-f75c-47f2-a185-57cdd44d9cba', 'createdTime': '2024-07-04T10:30:20.435122Z', 'lastUpdatedTime': '2024-07-04T10:30:20.5410869Z', 'status': 'InProgress', 'message': None, 'errorCode': None, 'errors': None}
+2024-07-04 10:30:23,071 - INFO - Uploading {'id': 'ba3ef1d9-f75c-47f2-a185-57cdd44d9cba', 'createdTime': '2024-07-04T10:30:20.435122Z', 'lastUpdatedTime': '2024-07-04T10:30:21.5998618Z', 'status': 'InProgress', 'message': None, 'errorCode': None, 'errors': None}
+2024-07-04 10:30:25,221 - INFO - Uploading {'id': 'ba3ef1d9-f75c-47f2-a185-57cdd44d9cba', 'createdTime': '2024-07-04T10:30:20.435122Z', 'lastUpdatedTime': '2024-07-04T10:30:21.5998618Z', 'status': 'InProgress', 'message': None, 'errorCode': None, 'errors': None}
+2024-07-04 10:30:27,381 - INFO - Uploading {'id': 'ba3ef1d9-f75c-47f2-a185-57cdd44d9cba', 'createdTime': '2024-07-04T10:30:20.435122Z', 'lastUpdatedTime': '2024-07-04T10:30:27.1180845Z', 'status': 'InProgress', 'message': None, 'errorCode': None, 'errors': None}
+2024-07-04 10:30:29,536 - INFO - Uploading {'id': 'ba3ef1d9-f75c-47f2-a185-57cdd44d9cba', 'createdTime': '2024-07-04T10:30:20.435122Z', 'lastUpdatedTime': '2024-07-04T10:30:28.2424876Z', 'status': 'Succeeded', 'message': 'Successfully updated package to ba3ef1d9-f75c-47f2-a185-57cdd44d9cba.zip', 'errorCode': '', 'errors': None}
+2024-07-04 10:30:31,536 - INFO - {'id': 'ba3ef1d9-f75c-47f2-a185-57cdd44d9cba', 'createdTime': '2024-07-04T10:30:20.435122Z', 'lastUpdatedTime': '2024-07-04T10:30:28.2424876Z', 'status': 'Succeeded', 'message': 'Successfully updated package to ba3ef1d9-f75c-47f2-a185-57cdd44d9cba.zip', 'errorCode': '', 'errors': None}
+2024-07-04 10:30:31,536 - INFO - Successfully updated package to ba3ef1d9-f75c-47f2-a185-57cdd44d9cba.zip
+2024-07-04 10:30:31,747 - INFO - Submission sent
+2024-07-04 10:30:31,747 - INFO - Admin review operation id: 7c6093b8-3548-4af0-889c-97cb91a26ab1
+2024-07-04 10:30:31,900 - INFO - {'id': '7c6093b8-3548-4af0-889c-97cb91a26ab1', 'createdTime': '2024-07-04T10:30:31.7154219Z', 'lastUpdatedTime': '2024-07-04T10:30:31.7617575Z', 'status': 'InProgress', 'message': None, 'errorCode': None, 'errors': None}
