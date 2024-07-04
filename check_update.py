@@ -51,6 +51,4 @@ with open("./data/admin_operation", "w") as file:
     admin_review_operation_id = file.read()
 
 login_token = login()
-get_submission_details(login_token, admin_review_operation_id)
-
- 
+print(get_submission_details(login_token, admin_review_operation_id))
