@@ -15,6 +15,9 @@ if not os.path.exists('logs'):
 if not os.path.exists('releases'):
     os.makedirs('releases')
 
+if not os.path.exists('data'):
+    os.makedirs('data')
+
 logging.basicConfig(
     filename=f'logs/{formatted_now}.log',
     level=logging.INFO,
